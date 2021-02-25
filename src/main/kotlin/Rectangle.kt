@@ -1,19 +1,21 @@
 import kotlin.math.abs
 
-class Rectangle(
-    var x1: Double, var x2: Double,
-    var y1: Double, var y2: Double
-) {
-    // Конструктор класса принимает
-    // только левую верхнюю
-    // и правую нижнюю точки
-
+class Rectangle: Figure {
+    /*
+    Конструктор класса принимает
+    только левую верхнюю
+    и правую нижнюю точки
+    */
+    constructor(coord_in: Array<point>): super(coord_in) {
+        if(coord_in.size == 2) vertices = coord_in
+        else println("Are you crazy?")
+    }
     fun Area(): Double {
         val area: Double
         val a: Double
         val b: Double
-        a = abs(x1 - x2)
-        b = abs(y1 - y2)
+        a = abs(vertices[0].x- vertices[1].x)
+        b = abs(vertices[0].y - vertices[1].y)
         area = a * b
         return area
     }
