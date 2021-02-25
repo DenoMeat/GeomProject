@@ -7,7 +7,7 @@ class Square:Figure {
     }
     // Конструктор класса принимает
     // только две верхние вершины
-    fun Area():Double{
+    fun area():Double{
         return (vertices[0].x-vertices[2].x)*(vertices[0].x-vertices[2].x) +
                 (vertices[0].y-vertices[2].y)*(vertices[0].y-vertices[2].y)
     }

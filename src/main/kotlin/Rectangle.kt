@@ -10,7 +10,7 @@ class Rectangle: Figure {
         if(coord_in.size == 2) vertices = coord_in
         else println("Are you crazy?")
     }
-    fun Area(): Double {
+    fun area(): Double {
         val area: Double
         val a: Double
         val b: Double
